@@ -1,0 +1,70 @@
+#! /bin/sh
+# Copyright (c) 07/2004 A.Tophofen, Germany
+#
+# init.d/allview_agentd
+#
+### BEGIN INIT INFO
+# Provides:       allview_suckerd
+# Required-Start: $network $remote_fs $syslog
+# Required-Stop:
+# Default-Start:  3 
+# Default-Stop:
+# Description:    Starts Allview_Agentd
+### END INIT INFO
+
+. /etc/rc.status
+rc_reset
+NAME="Allview_Suckerd"
+CONFIG_FILE="/etc/allview/allview_suckerd.conf"
+
+if [ ! -f ${CONFIG_FILE} ]; then
+		echo -n "${NAME}configuration file ${CONFIG_FILE} does not exist. "
+		# Tell the user this has skipped
+		rc_status -s
+		exit 6
+fi
+
+ALLVIEW_BIN="/home/allview/bin/allview_suckerd"
+ALLVIEW_PID="/home/allview/lock/allview_suckerd.pid"
+
+
+if [ ! -x ${ALLVIEW_BIN} ] ; then
+	echo -n "${ALLVIEW_BIN} not installed! "
+	# Tell the user this has skipped
+	rc_status -s
+	exit 5
+fi
+
+
+export PATH="/sbin:/usr/sbin:/bin:/usr/bin:/home/allview/bin"
+
+case "$1" in
+    start)
+	echo -n "Starting ${NAME} "
+	checkproc -p ${ALLVIEW_PID} ${ALLVIEW_BIN}
+	case $? in
+		0) echo -n "- Warning: ${NAME} already running! " ;;
+		1) echo -n "- Warning: ${ALLVIEW_PID} exists! " ;;
+	esac
+	
+	startproc -p ${ALLVIEW_PID} ${ALLVIEW_BIN} -u allview
+	rc_status -v
+	;;
+    stop)
+	echo -n "Shutting down ${NAME}"
+	checkproc -p ${ALLVIEW_PID} ${ALLVIEW_BIN} || echo -n "- Warning: ${NAME} not running! "
+	killproc -p ${ALLVIEW_PID} -TERM ${ALLVIEW_BIN}
+	rc_status -v
+	;;
+    restart)
+	$0 stop
+	$0 start
+	rc_status
+	;;
+        *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+	;;
+esac
+rc_exit
+

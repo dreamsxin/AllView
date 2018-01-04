@@ -1,0 +1,1191 @@
+Changes for 1.0 Release7:
+
+ - fixed memory[free] for HP-UX when >4GB of memory (Allview team)
+ - hard-linked templates works when deleting an action (Allview team)
+ - hard-linked templates works when adding an action (Allview team)
+ - added frontends/php/include/hosts.inc.php (Allview team)
+ - added frontends/php/include/maps.inc.php (Allview team)
+ - added frontends/php/include/services.inc.php (Allview team)
+ - added frontends/php/include/actions.inc.php (Allview team)
+ - hard-linked templates works when deleting a trigger (Allview team)
+ - hard-linked templates works when adding a trigger (Allview team)
+ - no warning about uninitialised function_str (Allview team)
+ - fixed simple checks (Allview team)
+ - fixed startup of housekeeper (Allview team)
+ - added frontends/php/include/triggers.inc.php (Allview team)
+ - added frontends/php/include/graphs.inc.php (Allview team)
+ - added frontends/php/include/audit.inc.php (Allview team)
+ - added frontends/php/include/users.inc.php (Allview team)
+ - added frontends/php/include/screens.inc.php (Allview team)
+ - added frontends/php/include/items.inc.php (Allview team)
+ - Overview and Details mode for screen Queue (Allview team)
+
+Changes for 1.0 Release6:
+
+ - show both hostname and lable in ALT for map icons (Allview team)
+ - added propagation of template item change to related hosts (Allview team)
+ - modified data.sql to exclude allview_suckerd and allview_agentd (Allview team)
+ - fixed SQL warning when updating actions (Allview team)
+ - fixed change of plain text data in screens (Allview team)
+ - fixed mouse navigation for multiple maps in one screen (Allview team)
+ - configurable timestamp format in local_en.inc.php (Allview team)
+ - support for no labels and no status in network maps (Allview team)
+ - fix for startup of housekeeping process (Allview team)
+ - fix of agent crash on 64 bit platforms in CKSUM() (Allview team)
+ - added frontends/php/overview.php (Allview team)
+ - removed link to unexistant trends.php (Allview team)
+ - support for unlimited number of user parameters (Allview team)
+ - support of passing of parameters to user-defined commands (Allview team)
+ - improved allview.spec. Thanks to Dirk Datzert. (Allview team)
+ - fixed detection of __va_copy() (Allview team)
+
+Changes for 1.0 Release5:
+ 
+ - fixed mouse navigation for multiple maps in one screen (Allview team)
+ - fixed unmodified item parameter "Keep trends (in days)" (Allview team)
+ - fixed support of negative values for SNMP integers (Allview team)
+ - added support of function dayofweek() for triggers (Allview team)
+ - configurable format of icon labels for maps (Allview team)
+ - added column sysmaps.label_type (Allview team)
+ - keep host selection when adding/deleting/updating item (Allview team)
+ - fix for complation of the agent under Solaris (Allview team)
+ - do not use hardcoded port 161 when adding from template (Allview team)
+ - changed logic update host.available instead of host.status (Allview team)
+ - added column hosts.available (Allview team)
+ - added link to ALLVIEW Manual v1.1 into page header (Allview team)
+ - fixed evaluation of nodata(). Thanks to Igor Micko. (Allview team)
+ - fixed time selection for custom graphs (Allview team)
+ - configurable format of map output (png, jpg) (Allview team)
+ - special processing of 'b' and 'bps' (bytes). Take 1000 for Kilos (Allview team)
+ - fix of crash of allview_server when processing notification macros (Allview team)
+ - added form for managing images (Allview team)
+ - added frontends/image.php (Allview team)
+ - added table 'hosts_templates' (Allview team)
+ - added table 'escalations' (Allview team)
+ - selection of configuration areas in config.php (Allview team)
+
+Changes for 1.0 Release4:
+
+ - fixed problem with blank graphs (Allview team)
+ - support of plain text value for screens (Allview team)
+ - fixed parsing of command line parameters. Thanks to Slix. (Allview team)
+ - added special item allview[log] (Allview team)
+ - calculate items.nextcheck as nextcheck+delay (Allview team)
+ - fixed time navigation for user-defined graphs (Allview team)
+ - added link to ALLVIEW manual from all forms (Allview team)
+ - icmppingsec to return '0' if cannot ping (Allview team)
+ - added error reason for unsupported items (Allview team)
+ - added error reason for unreachable hosts (Allview team)
+ - added hosts.error (Allview team)
+ - added items.error (Allview team)
+ - added alerts.error (Allview team)
+ - added error reason for undelivered alerts (Allview team)
+ - added upgrades/dbpatches/1.0 Release3_to_1.0 Release4 (Allview team)
+ - fixed empty macros in alert messages if '.' in key (Allview team)
+ - do not show menu item if no permissions (Allview team)
+
+Changes for 1.0 Release3:
+
+ - fixed wrong use of multiplier for items (Allview team)
+ - remover src/allview_sucker and src/allview_trapper (Allview team)
+ - one common process for sucker and trapper: allview_server (Allview team)
+ - removed column items.lastdelete (Allview team)
+ - do not use items.lastdelete in housekeeping process (Allview team)
+ - do not draw straight lines in graphs if no data (Allview team)
+ - fixes for PHP5 (Allview team)
+ - fix for crash of allview_suckerd (Allview team)
+
+Changes for 1.0 Release2:
+
+ - support for cpu[idleX], cpu[userX], cpu[niceX], cpu[systemX] (Allview team)
+ - fix for custom multiplier (Allview team)
+ - use checkbox instead of lists in users.php (Allview team)
+ - removed thread-related configuration options from configure.in (Allview team)
+ - fixed audit log for graph elements (Allview team)
+ - do not reference ALLVIEW logo from www.myleftstudio.com (Allview team)
+ - fixed addition of network maps (Allview team)
+
+Changes for 1.0 Release1:
+
+ - agent will return ALV_UNSUPPORTED in case if execute command returned EOL only (Allview team)
+ - support of diskfree_perc[],diskused_perc[], inodefree_perc[]. (Allview team)
+ - support of check_service[ldap] and check_service_perf[ldap]. Thanks to Andreas Brenk. (Allview team)
+ - fixed incorrect setting of ICMP-related triggers to UNKNOWN state (Allview team) 
+ - added table audit (Allview team)
+ - added audit.php (Allview team)
+ - new default port numbers for agent and trapper, 10050 and 10051 (Allview team)
+ - better internal coding standard for ALLVIEW agent (Allview team)
+ - added support for md5sum for files less than 64M (Allview team)
+ - added include md5.c and md5.h (Allview team)
+ - remove trends.php, trend.php (Allview team)
+ - remove compare.php, chart3.php (Allview team)
+ - show trigger dependencies in list of configuration of triggers (Allview team)
+ - make Allview reset nextcheck for items when updating or adding a trigger (Allview team)
+ - minimum value of PingerFrequency changed to 1 (Allview team)
+ - different icons depending on a triger status for sysmaps (Allview team)
+ - added column sysmaps_hosts.icon_on (Allview team)
+ - hierarchial maps (Allview team)
+ - added column sysmaps_hosts.url (Allview team)
+ - upgrades/dbpatches/1.0_to_1.0 Release1/data/images/ (Allview team)
+ - added support for custom multiplier (Allview team)
+ - added column items.formula (Allview team)
+ - added support of SNMPv3 (Allview team)
+ - added columns snmpv3_* to table items (Allview team)
+ - increased max number of network interfaces to 16 for allview_agentd (Allview team)
+ - added command line parameters -c <config> and -h to allview_trapperd (Allview team)
+ - added command line parameters -c <config> and -h to allview_agentd (Allview team)
+ - added command line parameters -c <config> and -h to allview_suckerd (Allview team)
+ - added support for customised Y axis for graphs (Allview team)
+ - added columns graphs.(yaxistype|yaxismin|yaxismax) (Allview team)
+ - send date as part of email alerts (Allview team)
+ - added SuSE 9.1 startup scripts. Thanks to A.Tophofen. (Allview team)
+ - change of architecture to multi-threaded model (Allview team)
+ - fixed typo: getuid() -> getgid() in daemon_init() (Allview team)
+ - added housekeeping of trends (Allview team)
+ - added column items.trends (Allview team)
+ - added escaping of SQL statements where needed (Allview team)
+ - added src/allview_sucker/checks_agent.[h,c] (Allview team)
+ - added src/allview_sucker/checks_internal.[h,c] (Allview team)
+ - added src/allview_sucker/checks_snmp.[h,c] (Allview team)
+ - added src/allview_sucker/checks_simple.[h,c] (Allview team)
+ - send alert when trigger changes its value to TRUE for the first time (Allview team)
+ - added support of allview[history_str] (Allview team)
+ - use $_GET, $_POST, $_COOKIE to be PHP5-compatible. Thanks to Martin MOHNHAUP. (Allview team)
+ - added table 'images' (Allview team)
+ - added small icons for maps (Allview team)
+ - added basic support of background images (Allview team)
+ - added frontends/php/include/html.inc.php (Allview team)
+ - added support for real delta. item.delta=2. (Allview team)
+ - new selection for triggers.php (Allview team)
+ - new selection for items.php (Allview team)
+ - removed helpdesk.php (Allview team)
+ - fixed check of permissions for screenedit.php (Allview team)
+ - new selection for graphs in charts.php (Allview team)
+ - new selection of maps in maps.php (Allview team)
+ - new selection of group and host for latest.php (Allview team)
+ - added support for macro {IPADDRESS} (Allview team)
+ - added support of localisation (Allview team)
+ - added file frontends/php/include/locale_en.inc.php (Allview team)
+ - fixed check of NNTP service (Allview team)
+ - show metrics (3.01 Gb) in alert messages (Allview team)
+ - added support for configurable after-login screen (Allview team)
+ - added column users.url (Allview team)
+ - email routines moved to email.c (Allview team)
+ - fixed hosts.php. Changed <? to <?php. (Allview team)
+ - fixed number of trapped items in STATUS OF ALLVIEW. Thanks to Igor. (Allview team)
+ - fixed proc_cnt[allview_agentd] under Linux (Allview team)
+ - added list of hosts for groups and IP addresses in host maintenance (Allview team)
+ - fixed MacOS X related compilation issues. Thanks to Charles Galpin. (Allview team)
+ - fixed calculation of maximum values for table 'trends'. Thanks to Igor. (Allview team)
+ - fixed evaluation of expressions when a number contains spaces (Allview team)
+ - added Gentoo start-up scripts. Thanks to Andreas Tophofen. (Allview team)
+ - fixed PostgreSQL schema. Removed unnecessary comma. (Allview team)
+
+Changes for 1.0:
+
+ - changed graph legend a little bit. Thanks to Igor. (Allview team)
+ - added support of IP adresses returned by SNMP agents (Allview team)
+ - fixed serious issue with sending of alerts (Allview team)
+ - small fix in latestalarms.php (Allview team)
+ - added support for simple check 'tcp,<port>' (Allview team)
+ - added template 'Application.MySQL' (Allview team)
+ - added button "add items from template" (Allview team)
+ - added template 'Host.SNMP'. Thanks to Kenneth Durrant. (Allview team)
+ - fixed host statistics in report1.php (Allview team)
+ - templates were renamed to "Host.Unix", "Host.Win32" and "Host.Standalone" (Allview team)
+ - fixed problem with undefined socklen_t under Solaris (Allview team)
+ - show user groups in the list of users. Thanks to Igor (Allview team)
+ - fixed sql statement in trigger definition form (Allview team)
+ - changed all versions from 1.0beta14 to 1.0 (Allview team)
+ - converted redhat scripts from DOS to UNIX format (Allview team)
+
+Changes for 1.0beta14:
+
+ - added DB patches for migration to 1.0beta14 (Allview team)
+ - changed logic of actions: scope=1 (triggerid=hostid), 2 (triggerid=0) (Allview team)
+ - fixed compilation of --with-pgsql on non-GCC platforms (Allview team)
+ - fixed refresh in actions screen (Allview team) 
+ - show severity of triggers in the list (Allview team)
+ - fixed trigger update. Value of the trigger sets to UNKNOWN. (Allview team)
+ - fixed --with-[net|ucd]-snmp to work with various paths (Allview team)
+ - changed css.css to follow W3C standard (Allview team)
+ - changed DB schema. Dropped foreign key for table actions (Allview team)
+ - fixed handling of special chars in adding from templates (Allview team)
+ - fixed output of special characters in maps (Allview team)
+ - fixed permission check for screens (Allview team)
+ - delete sysmap information on host removal (Allview team)
+ - fixed compilation of the agent under HP-UX (Allview team)
+ - fixed simple checks to return NOTSUPPORTED (Allview team)
+ - removed primary keys for both 'history' and 'history_str' (Allview team)
+ - added support for system[proccount] under FreeBSD (Allview team)
+ - remove trailing zeroes in function evaluation routines (Allview team)
+ - added support for proc_cnt[*] under FreeBSD (Allview team)
+ - special processing of unit 's' (Allview team)
+ - added W32 install floppy. Thanks to  Fabricio Ferrari. (Allview team)
+ - new action type: "ON or OFF" (Allview team)
+ - added support of macro {STATUS} (Allview team)
+ - pinger to work for all hosts (ip and hostname-based) (Allview team)
+ - fixed memory[cached] to work for both linux 2.4 and 2.6 (Allview team)
+ - do not link crypt and crypto to the agent (Allview team)
+ - fixed report1.php to work under FreeBSD (Allview team)
+ - fixed displaying of string value in the Latest Values (Allview team)
+ - fixed simple check when port specified. Order of IP and PORT is
+ arbitrary now (Allview team)
+ - fixed pinger to correc calculate number of seconds (Allview team)
+ - fixed selection of "Dark Yellow" for graphs and map links (Allview team)
+ - fixed removal of trigger dependency (Allview team)
+ - added substitution of macros for all actions (Allview team)
+ - added escaping of 'special' characters before SQL insert statements (Allview team)
+ - fixed removal of sysmaps hosts and links when deleting item (Allview team)
+ - fixed Use IP address in host definition form (Allview team)
+ - fixed audio in Status of Triggers (Allview team)
+ - fixed change of action subject if it contains special characters (Allview team)
+ - fixed creation of actions from templates (Allview team)
+ - Battery.png has been renamed to UPS.png (Allview team)
+ - fixed removal of an item under PostgreSQL (Allview team)
+ - fixed patch for PostgreSQL (Allview team)
+
+Changes for 1.0beta13:
+
+ - fixed sending of alerts when PostgreSQL is used (Allview team)
+ - sprintf() was replaced with snprintf() (Allview team)
+ - fix for prefixes K,M and G (Allview team)
+ - strncpy() was replaced with secure strscpy() where possible (Allview team)
+ - fixed support for situation when one of graph's metrics has no values
+ (Allview team)
+ - added '2>/dev/null' to fping to get rid of message on the console (Allview team)
+ - new icons and icon types for sysmaps (Allview team)
+ - added columns color_on,color_off,drawtype_on,drawtype_off to table
+ sysmaps_links (Allview team)
+ - do not show group having no hosts in Latest Values (Allview team) 
+ - better management of host groups (Allview team)
+ - added support of macro {HOSTNAME}, removed support of %s (Allview team)
+ - added support of macros {DATE} and {TIME} in alerts (Allview team)
+ - fixed selection of multiplier in item definition form (Allview team)
+ - support for 'icmppingsec' (Allview team)
+ - added support of symbol '-' in keys used for trigger expressions (Allview team)
+ - added information about table 'trends' to 'Status of Allview' screen (Allview team)
+ - transparency for graphs on GD 2.x platforms (Allview team)
+ - added timestamp and header to maps (Allview team)
+ - fixes for screens.php (Allview team)
+ - fixes for screenedit.php (Allview team)
+ - added parameter DisablePinger (Allview team)
+ - correct processing of RCPT TO responses from SMTP servers (Allview team)
+ - correct processing of unsupported internal checks (Allview team)
+ - processing of DB stopped situations for MySQL (Allview team)
+ - housekeeper to delete hosts_groups entries (Allview team)
+ - deleted host to be renamed to "<host> [DELETED]" (Allview team)
+ - added function now() (Allview team)
+ - fixed action maintenance screen (Allview team)
+ - redesigned availablity chart (Allview team)
+ - support for allview[trends] (Allview team)
+ - added table 'trends' (Allview team)
+ - cosmetic changes for IT Services screen (Allview team)
+ - change of color schema for SLA graphs and report (Allview team)
+ - redesigned IT Service availability chart (Allview team)
+ - fix for get_last_service_value(). Thanks to Sebastien "Slix" Linard. (Allview team)
+ - fix for chart_sla.php. Thanks to Sebastien "Slix" Linard. (Allview team)
+ - proper timeout handling for SNMP connect (Allview team)
+
+Changes for 1.0beta12:
+
+ - fixed add services (Allview team)
+ - fixed simple *_perf checks (Allview team)
+ - data.sql was modified to include usrgrp records (Allview team)
+ - fixed update of special items 'status'. Thanks to
+ Sebastien "Slix" Linard. (Allview team) 
+ - fixes for graph time navigation (Allview team)
+ - fixed processing of trapped values, fixed pinger. Thanks
+ to Sebastien "Slix" Linard. (Allview team) 
+ - fixed UserParameter when it replaces existing one. Thanks to
+ Sebastien "Slix" Linard. (Allview team) 
+ - fixed PostgreSQL schema (Allview team)
+
+Changes for 1.0beta11:
+
+ - added support for user groups (Allview team)
+ - added column actions.recipient (Allview team)
+ - added support of system[proccount] under Solaris (Allview team) 
+ - support for swap sizes >2Gb under Solaris. Thanks to Franky
+ Van Liedekerke. (Allview team)
+ - add actions when using templates. (Allview team)
+ - fixed refresh of status of triggers. (Allview team) 
+ - updated RedHat start-up scripts in misc/init.d/redhat. Thanks
+ to Charlie. (Allview team)
+ - fix for flexible SNMP port name (Allview team)
+ - fixed permissions of PHP screens (Allview team)
+ - period in graphs. Thanks to Igor Micko. (Allview team)
+ - date in graphs (Allview team)
+ - no refresh for charts.php if period is set (Allview team)
+ - new navigation for charts.php. Thanks to Igor Micko. (Allview team)
+ - fixed snmptrap.sh (Allview team)
+ - IRC support channel #allview on irc.pilgerer.org (Allview team)
+ - fix for dashed lines under some broken GD (Allview team)
+ - http://allview.sf.net was changed to http://www.allview.org
+ (Allview team)
+ - support of delta flag in item definition (Allview team)
+ - added column items.delta,prevorgvalue (Allview team)
+ - support for operator '#', not equal. (Allview team)
+ - support for functions date() and time() (Allview team)
+ - fix of /proc/stat interpretation in diskdevice.c (Allview team)
+ - support of system[uptime] for Solaris. Thanks to Franky Van
+ Liedekerke. (Allview team)
+ - fix for disk space calculation. Use statvfs' f_frsize instead
+ of f_bsize. Thanks to Franky Van Liedekerke. (Allview team)
+ - restrict host status change from Unreachable (Allview team)
+ - fix for Solaris swap sizes (Allview team)
+ - fix for counting of triggers in map.php.  (Allview team)
+ - added translation of special HTML characters in history of
+ alerts and alarms (Allview team)
+ - fixed calculation of graph width under MS Explorer (Allview team)
+ - fixed interpretation of parameter 'from' for graphs (Allview team)
+ - removed references to screens_graphs (Allview team)
+ - fix for proc_cnt[*] under Solaris (Allview team)
+ - fix of automatic image scaling under Explorer for charts.php
+ (Allview team)
+ - fixed division by zero and infinite loop in graphs (Allview team)
+ - fixes for agent. Error checking for opendir() (Allview team)
+ - fix for syslog logging of allview_trapperd (Allview team)
+ - added table users_groups, usrgrp (Allview team)
+ - monitoring of CPU and mainboard temperature under Linux (Allview team)
+ - support for sensor[temp1],sensor[temp2],sensor[temp3] (Allview team)
+ - report1.php to use 'ps -ef' (Allview team)
+ - support for prefixes in trigger expressions (K,M,G) (Allview team)
+ - new item status: 'deleted' (Allview team)
+ - fixed autoconf problems under SUSE 8.2 (Allview team)
+ - housekeeping to delete hosts having status 'deleted' (Allview team)
+ - AC_FUNC_GETLOADAVG changes to AC_REPLACE_FUNCS(getloadavg) in
+ configure.in (Allview team)
+ - eliminated compiler's warnings under SUSE 8.2 (Allview team)
+ - added src/allview_sucker/housekeeper.* (Allview team)
+ - new host status: 'deleted' (Allview team)
+
+Changes for 1.0beta10:
+
+ - removed script misc/pinger/ (Allview team)
+ - support if simple check 'icmpping' (Allview team)
+ - new allview_suckerd's parameter: PingerFrequency (Allview team)
+ - new allview_suckerd's parameter: FpingLocation (Allview team)
+ - improvements for action form (Allview team)
+ - support of system maps for screens (Allview team)
+ - removed column graphid from table screens_items (Allview team)
+ - added columns resource and resourceid to table screens_items
+ (Allview team)
+ - non breakable space in PHP forms (Allview team)
+ - new draw type for graphs: Dot (Allview team)
+ - improved media maintenance form (Allview team)
+ - added sort order for custom graphs (Allview team)
+ - added column graphs_items.sortorder (Allview team)
+ - fixed problem when adding host from template and function 'str' 
+ is used. Thanks to Jean-Baptiste Mariotte. (Allview team)
+ - support of proc_cnt[*] under Solaris. Thanks to Marc Ledent (Allview team)
+ - fixed sysinfo() result. Multiplication to mem_unit required (Allview team)
+ - better reporting in case of different startup errors (Allview team)
+ - added include/pid.c and include/pid.h (Allview team)
+ - PostreSQL related fixes (Allview team)
+ - added src/allview_snmptrap (Allview team)
+ - fixed support of user-defined height of graphs (Allview team)
+ - added frontends/include.classes.inc.php (Allview team)
+ - show selected host in Host Add form (Allview team)
+ - fixed snmptrap.sh (Allview team)
+ - improved performance of simple graphs (Allview team)
+ - minor fixes to eliminate compiler's warnings (Allview team)
+ - fix to show HTML characters of string items in Latest Values and
+ History  (Allview team)
+ - added disk statistics to data.sql (Allview team)
+ - popup confirmation screen for deletes and updates (Allview team)
+ - buttons "Activate selected" and "Disable selected" in item
+ maintenance form (Allview team)
+ - do not wrap Latest Values (Allview team)
+ - support for changing of graph items (Allview team)
+ - menu will not require more than three lines (Allview team)
+ - fixed dividion by zero in chart2.php (Allview team)
+ - period and start of interval are preserved in full-screen mode (Allview team)
+ - added units in graph legends (Allview team)
+ - table-like legend for user graphs (Allview team)
+ - small fix for executing user scripts (Allview team)
+ - fix to enable use of abschange() (Allview team)
+ - cosmetic change of "LATEST VALUES" screen (Allview team)
+ - support for simple checks :smtp_perf, ftp_perf, ssh_perf, etc. (Allview team)
+ - fixed nasty bug in getting SNMP parameters. Thanks to Igor Micko.
+ (Allview team)
+ - added support for diskused[*] (Allview team)
+ - Alert History renamed to Alerts (Allview team)
+ - Status of Triggers renamed to Triggers (Allview team)
+ - added check for kstat library for ./configure (Allview team)
+ - added support for allview[queue] (Allview team)
+ - added basic support for simple graphs in screens (Allview team)
+ - dynamic form hosts.php (Allview team)
+ - fixed 'make clean' under Solaris (rm -fv -> rm -f) (Allview team)
+ - link map's connector to a trigger
+ - added parameter ListenIP to allview_agentd.conf (Allview team)
+ - added pinger.c and pinger.h (Allview team)
+ - fixed search of SNMP header files and libs (Allview team)
+ - improved performance of Alarm and Alert History (Allview team)
+ - added support for units (Mb, Kb, Gb, etc) (Allview team)
+ - added column items.multiplier (Allview team)
+ - added column items.units (Allview team)
+ - added table 'stats' (Allview team)
+ - support for spaces in trigger expression. Thanks to Sébastien "Slix"
+ Liénard. (Allview team)
+ - dynamic form items.php (Allview team)
+ - added allview.spec. 'rpm -ta allview.tar.gz'. Thanks to Harald Holzer. (Allview team)
+ - dynamic form config.php (Allview team)
+ - fixes in services.php (Allview team)
+ - fixes in screenedit.php (Allview team)
+ - UserParameter does not become UNSUPPORTED anymore (Allview team)
+ - added support for allview[triggers_count] (Allview team)
+ - added support for allview[items_unsupported_count] (Allview team)
+ - support for memory[free] and memory[total] under Solaris (Allview team)
+ - fixed compilation of the agent under FreeBSD (Allview team)
+
+Changes for 1.0beta9:
+
+ - added severity to media definition (Allview team)
+ - add media.severity (Allview team)
+ - added support for check_service_perf[*]. Thanks to Jürgen Schmitz (Allview team)
+ - added parameter AlertScriptsPath to allview_suckerd (Allview team)
+ - added support for alternative medias (Allview team)
+ - added src/allview_sucker/alerter.h (Allview team)
+ - added src/allview_sucker/alerter.c (Allview team)
+ - removed column alerts.type, added column alerts.mediatypeid (Allview team)
+ - added table media_type (Allview team)
+ - removed column media.type, added column media.mediatypeid (Allview team)
+ - removed columns config.(smtp_server,smtp_helo,smtp_email) (Allview team)
+ - added columns actions.scope and actions.severity (Allview team)
+ - added support of global alerts limited by triggers severity (Allview team)
+ - added group selection in Item and Trigger definition forms (Allview team)
+ - added support for functions abschange(),change(),delta(),sum(), 
+ count() and avg() in trigger expressions (Allview team)
+ - fixed plaintext values for string data type. Thanks to
+ Sébastien "Slix" Liénard. (Allview team)
+ - misc fixes for services.php. Thanks to Sébastien "Slix" Liénard.
+ (Allview team)
+ - different styles for user-defined graphs (Allview team)
+ - cached memory in bytes (not in Kb as before) (Allview team)
+ - show current and planned SLA in IT Services screen (Allview team)
+ - added sort order by sortorder for IT Services (Allview team)
+ - added column service.sortorder (Allview team)
+ - show last 20% (80%-100%) in SLA bar (Allview team)
+ - fixed statistics of bounced interfaces (Allview team)
+ - added support for allview[items], allview[history] (Allview team)
+ - new item type: internal (Allview team)
+ - play disaster-on.wav if disaster trigger appers (Allview team)
+ - added support for disk_read_opsX[*],disk_write_opsX[*],disk_read_blksX[*],
+ disk_write_blksX[*] (Allview team)
+ - added basice support of monitoring of disk stats (Allview team)
+ - session cookie will expire wneh session is closed (Allview team)
+ - fixed situation when large SNMP values become nagative (Allview team) 
+ - added EOL character to make HTML source more readable (Allview team)
+ - added new column "severity" to history of alarms (Allview team)
+ - status of triggers. If Select is used, no refresh (Allview team)
+ - support for MIN algorithm for IT Services (Allview team)
+ - support for timeticks for SNMP values. Thanks to Daniel
+ Ester. (Allview team)
+ - fixed pinger.pl (Allview team)
+ - user-defined parameters will overwrite already existing
+ (Allview team)
+ - fixed field order for PostgreSQL, table items (Allview team)
+ - removed doc/manual.lyx (Allview team)
+ - fixed resizing of simple graphs (Allview team)
+ - suppor for "--with-net-snmp" and "--with-ucd-snmp" (Allview team)
+ - fixed type of services.goodsla. It's float now. (Allview team)
+ - fixed addition of host triggers into IT Service tree (Allview team)
+ - support of '(' and ')' in item keys (Allview team)
+ - fixed dark blue color for user-defined chart (Allview team)
+ - removed DOS style EOL from RedHat startup scripts (Allview team)
+ - IT service to be hard-linked when added (Allview team)
+ - fixed calculate_service_availability() (Allview team)
+ - added report3.php (Allview team)
+ - color statuses in media.php (Allview team)
+ - fixed data.sql (Allview team)
+
+Changes for 1.0beta8:
+
+ - very basic support for SNMP trapping (Allview team)
+ - added misc/snmptrap/snmptrap.sh (Allview team)
+ - group selection for Item configuration form (Allview team)
+ - added support for SLA level in IT Services (Allview team)
+ - added fields services.showsla and services.goodsla (Allview team)
+ - added field items.snmp_port (Allview team)
+ - user-defined port number for SNMP requests (Allview team)
+ - fixed SQL errors when adding host to IT Services (Allview team)
+ - added chart_sla.php (Allview team)
+ - fixed incorrect handling of timeouts when sendign emails
+ (Allview team)
+ - fixed selection of recipient in trigger actions (Allview team)
+ - fixed Plain Text values (Allview team)
+ - fixed improper handling of special characters i.e. '\/" (Allview team)
+ - fixed Last100 and Prev100 for both Alarms and Alerts (Allview team)
+ - fixed "STATUS OF ALLVIEW". Command was changed to 'ps aux' (Allview team)
+ - personalisation (remember default port number for hosts) (Allview team)
+ - added table 'profiles' (Allview team)
+ - assured uniqueness of host names (Allview team)
+ - added upgrades/dbpatches/1.0beta7_to_1.0beta8/ with patches (Allview team)
+ - mass update for triggers (activate, deactivate, delete) (Allview team)
+ - all sendto() and recvfrom() were changed to write() and read() in function
+ send_mail() (Allview team)
+ - fixed bug in host addition procedure when template host is used (Allview team) 
+ - different colors for different status of items, triggers, users
+ (Allview team)
+
+ - WIN32 agent. Added support for multiple servers (Victor)
+ - WIN32 agent. Changes in communication protocol: on errors now returned
+   special (Victor)
+ - WIN32 agent. Support for new client-server protocol (Victor)
+ - WIN32 agent. Added proc_info[] parameter (Victor)
+ - WIN32 agent. Added memory[cached] parameter (supported only on Windows XP) (Victor)
+ - WIN32 agent. Added logging to system Event Log (Victor)
+ - WIN32 agent. PDH-related error messages are now more specific (Victor)
+ - WIN32 agent. Listener thread now will not exit on any accept() error
+   (Victor)
+ - WIN32 agent. Added some parameters for agent statistics monitoring: number 
+ of accepted and rejected connections, processing errors, etc. (Victor)
+ - WIN32 agent. Fixed bug in calculation of md5_hash[] and cksum[] parameters for
+ zero-length files (Victor)
+ - WIN32 agent. md5_hash[] and cksum[] now ruturns UNSUPPORTED for files larger than
+ 64MB (due to high performance impact caused by checksum computing for large files).
+ (Victor)
+
+
+Changes for 1.0beta7:
+
+ - startup scripts for RedHat 8.0. Thanks to John Crunk. (Allview team)
+ - refresh rate is doubled for user 'guest' (Allview team)
+ - mass insert and delete for items. (Allview team)
+ - support for SNMPv2. New item type introduced. (Allview team)
+ - improvements in housekeeping procedure (Allview team)
+ - improvements for chart.php (Allview team)
+ - added severity to pre-defined triggers (Allview team)
+ - SO_LINGER is not default socket() option for allview_sender. (Allview team)
+ - recvfrom() and sendto() were changed to read() and write() (Allview team)
+ - fixed housekeeping procedure. Upgrade carefully! (Allview team)
+ - support of template hosts. Remove tables hosts_templates and
+   triggers_template. (Allview team) 
+ - Show-Show-Show renamed to Graph-Trend-Compare in latest.html (Allview team)
+ - fixed buffer overflow in allview_log(). (Allview team)
+ - availability reports for trapper-based triggers (Allview team)
+ - fixed possible allview_suckerd crash. It may happen if socket() returns 0.
+   (Allview team)
+ - added new Host status - Template(3). (Allview team)
+ - fixed group "all" in latest.php (Allview team)
+ - do not dump "Expression cannot be evaluated" in case if function.lastvalue
+   is NULL. Logic was changed a bit, but the message is still there. (Allview team)
+ - show who is online in User config form. (Allview team)
+ - when ran first time, some triggers becomes TRUE (like files was changed).
+   This is already fixed. This bug does not exist. (Allview team)
+ - fixed bug in queue.php select statement. Trapper type will not be
+   selected. (Allview team)
+ - when W2000 with SNMP agent restarted, items will becomes Not Supported.
+   There is no such bug in CVS code anymore. (Allview team)
+ - map will show host status in case of trigger based on trapper (Allview team)
+ - fixed bug in allview_suckerd's select statements. Trapper type will not be
+   selected. (Allview team)
+ - new protocol for Allview agents, Support for ALV_ERROR and ALV_NOTSUPPORTED.
+   (Allview team)
+ - about.php: version of Allview was changed to 1.0beta7 (Allview team)
+ - items.php: "Delay" renamed to "Update interval". (Allview team)
+ - fixed precision issues in allview_agent(d) and allview_suckerd. All floats
+   converted to double. (Allview team)
+ - fixed selection of icon and host in sysmap.php. Thanks to Sébastien "slix"
+   Liénard. (Allview team)
+ - monitoring of servers without Allview agent installed. New item type: Simple
+   Check. (Allview team)
+ - improved performance of pinger.pl (Allview team)
+ - added support of ':','\' for flexible parameters (example, cksum[c:\a.bat])
+   (Allview team)
+ - added copyright notice to source files (Allview team)
+ - pinger.pl will use mass-send of collected data. No unnecessary forks
+   anymore. (Allview team)
+ - all <? ?> were changed to <?php ?>. No changes in php.ini required anymore.
+   (Allview team)
+ - added Allview agent for WIN32 platforms. Thanks to Victor Kirhenstein. (Allview team) 
+ - fixed coredump in get_lastvalue(). Thanks to Rickard Plars. (Allview team)
+ - delay renamed to "Update interval (in sec)" in item definition form
+ (Allview team)
+ - create/mysql/schema.sql will create tables with type=InnoDB by default
+ (Allview team)
+ - added upgrades/dbpatches/1.0beta6_to_1.0beta7/ with patches (Allview team)
+ - added item type TRAPPER (Allview team) 
+ - fixes for PostgreSQL (Allview team)
+ - added validation of host name (Allview team)
+ - default value of StartSuckers is set to 4 (Allview team) 
+ - fixed Select in Status of Triggers (Allview team)
+ - precision of Change is set to 2 in Latest Values (Allview team)
+ - --enable-static to work on all platforms (Allview team)
+ - allview_sender to be able to get information from stdin (Allview team)
+ - support fo JavaScript required now (Allview team)
+ - automatic resize of all graphs depending on screen size (Allview team)
+ - got rid of message "Bad protocol identification '0'" when doing check_service[ssh]
+ (Allview team)
+ - performance improvements for allview_suckerd (Allview team)
+ - added support of CSS (Allview team)
+ - support of processor load on Solaris 2.6. Thanks to Mariusz. (Allview team)
+ - improvements for user-defined graphs. Thanks to Mariusz. (Allview team)
+ - improvements for System Maps. Thanks to Mariusz. (Allview team)
+ - support for host groups (Allview team)
+ - added table hosts_groups (Allview team)
+ - added table groups (Allview team)
+ - ./configure to find PostgreSQL's includes in /usr/local/include
+ (Allview team)
+ - basic support for log rotating (Allview team)
+ - added additional error checks in get_value_snmp() (Allview team)
+
+Changes for 1.0beta6:
+
+ - parameter StatFile removed (Allview team)
+ - added support for check_service(service,ip,port) (Allview team)
+ - added support for check_port(ip,port) (Allview team)
+ - fixed check_right(). Thanks to Daniel Higgins. (Allview team)
+ - more changes to send_email(). Thanks to Daniel Higgins. (Allview team)
+ - added file TODO (Allview team)
+ - status will be changed to UNCREACHABLE only in case of three network errors
+ (Allview team)
+ - added column hosts.network_errors (Allview team)
+ - support for parameters netloadin[*] and netloadout[*] (Allview team)
+ - added src/allview_agent/stats.c and stats.h (Allview team)
+ - added parameter StatFile to allview_agentd.conf (Allview team)
+ - availability graph for IT Services (Allview team)
+ - improvement in user rights handling routines (Allview team)
+ - if trigger status is UNKNOWN, set function.lastvalue to NULL (Allview team)
+ - fixed permission check for all *.php (Allview team)
+ - Priority was renamed to Severity (Allview team)
+ - added graph to availability report (Allview team)
+ - added frontends/php/chart4.php (Allview team)
+ - availability report will not show trigger expressions (Allview team)
+ - added creation of table 'sessions' to migration scripts for 
+ 1.0beta4 (Allview team)
+ - no dependency on register_globals in php.ini (Allview team)
+ - allview_suckerd to write "Connection reset by peer" to LogFile
+ (Allview team)
+ - \n change to \r\n in send_email() (Allview team)
+ - added table service_alarms (Allview team)
+ - fixed problem with parsing of trigger expressions. [.-.] changed
+ to - (Allview team)
+ - support for function nodata() added (Allview team)
+ - minimum number of allview_suckerd that can be started is 4 (Allview team)
+ - simplified function update_triggers(). (Allview team)
+ - fixed situation when Service is linked to a trigger. Service name is
+   correct now. (Allview team)
+ - support for new trigger function: str() (Allview team)
+ - changed type of functions.parameter to varchar(255) (Allview team)
+ - additional colors for graphs (Allview team)
+ - in chart3.php: group by <complex expression> changed to group by 1
+ (Allview team)
+ - added housekeeping procedure for table sessions (Allview team)
+ - changed width=\"X%\" to width=X% in *.php (Allview team)
+ - Status of a trigger will blink if it was changes during last 300
+ seconds (Allview team)
+ - Allview daemons to update triggers.lastchange when triggers.values 
+ is changed (Allview team)
+ - added misc/init.d/debian/allview-[suckerd|trapperd] (Allview team)
+ - removed misc/init.d/debian/allview-server (Allview team)
+ - send_email() will timeout after 10 seconds (Allview team)
+ - DBadd_alarm() renamed to add_alarm() (Allview team)
+ - support for SCO OpenServer (Allview team). Thanks to Alexender Kirhenstein.
+ - ./configure will correctly define socklen_t (Allview team) 
+ - <center> changed to <div align=center> (Allview team)
+ - reason of problem in screen IT Services (Allview team) 
+ - added frontends.php/helpdesk.php (Allview team)
+ - added "...#form" to button Change in form Configuration of Users (Allview team)
+ - "Just for information" changed to "Information" (Allview team)
+ - fixed ./configure to correctly find zlib (Allview team)
+ - housekeeping to delete no more than HousekeepingFrequency*3600 records
+ from table history and history_str at once (MySQL only) (Allview team)
+ - changed definition of functions.lastvalue to allow NULL (Allview team)
+ - added upgrades/dbpatches/1.0beta5_to_1.0beta6/ with patches (Allview team)
+ - added misc/init.d/debian/allview_agent (Allview team)
+
+Changes for 1.0beta5:
+
+ - added parameter DBHost (Allview team)
+ - added upgrades/dbpatches/1.0beta4_to_1.0beta5/ with patches (Allview team)
+ - added support for disktotal[*] (Allview team)
+ - added support for inodetotal[*] (Allview team)
+ - added support for *,/,+, and - in trigger expressions (Allview team)
+ - removed frontends/php/chart4.php (Allview team)
+ - update item status to UNSUPPORTED in case if SNMP support was not included
+ into allview_suckerd (Allview team)
+ - added mysql_init() to DBconnect() (Allview team)
+ - fixed Next100 and Prev100 for case if some hosts are hidden (Allview team)
+ - added select for latest values (Allview team)
+ - delete related services if trigger is deleted (Allview team)
+ - fixed problem with substitution of macros for messages (Allview team)
+ - eliminated DBis_empty() by replacing to DBnum_rows() (Allview team)
+ - MAX_STRING_LEN increased to 4096 (Allview team)
+ - fixed allview_log(). Possible coredump if data contains %s, etc (Allview team)
+ - changed grid size for all graphs (Allview team)
+ - added frontends/php/chart4.php (Allview team)
+ - added frontends/php/compare.php (Allview team)
+ - redesigned all graphs (changed colors, etc) (Allview team)
+ - host selection for availability report (Allview team)
+ - more fixes to send_email() (Allview team)
+ - fixed crash in case if MySQL server gone (support for signal PIPE) (Allview team)
+ Thanks to Arturs.
+ - fixed duplicate triggers in Availability Report (Allview team)
+ - fixed division by zero in Availability Report (Allview team)
+ - added frontends/php/chart3.php (Allview team)
+ - small fix for form "Configuration of network map" (Allview team)
+ - for host templates, %s can be used in trigger description to be substituted
+   with new host name (Allview team)
+ - empty result for DBselect is always checked (Allview team)
+ - fixed send_email(). According to RFC, DATA should be sent with followed 
+ EOL (Allview team)
+ - fixed memory leak in main_alerter_loop(). Added DBfree_result(). (Allview team) 
+ - fixed missing close of socket in case if connection to SMTP server
+ is rejected (Allview team)
+
+Changes for 1.0beta4:
+
+ - ./configure will find libz  to solve problem with MySQL (Allview team)
+ - support for service tree (Allview team)
+ - vacuuming as part of housekeeping process for PostgreSQL (Allview team)
+ - many improvements for PostgreSQL support (Allview team)
+ - added item which reflects host status (0-normal, 2-unreachable) (Allview team)
+ - fixed function apply_actions() (Allview team)
+ - added Next100 and Prev100 for alerts and alarms (Allview team)
+ - check permissions for Availability report (Allview team)
+ - added parameter SenderFrequency to allview_suckerd configuration 
+ file (Allview team)
+ - added frontends/include/defines.inc.php (Allview team)
+ - added column services.algorithm (Allview team)
+ - list of test cases added to the Manual (Allview team)
+ - emails to be sent in case of TRUE-UNKNOWN-FALSE and v.s. (Allview team)
+ - one allview_suckerd to send alerts (Allview team)
+ - minimum number of allview_suckers StartSuckers is set to 3 (Allview team)
+ - added alerts.retries (Allview team)
+ - added alerts.status (Allview team)
+ - status of triggers changes if host/item status has been changed (Allview team)
+ - status of triggers is set correctly even if allview is restarted (Allview team)
+ - php/include/*inc renamed to php/include/*inc.php (Allview team)
+ - check of source IP address for trapped values (Allview team)
+ - added include/security.h and include/security.c (Allview team)
+ - added items.trapper_hosts (Allview team)
+ - housekeeping period for items to be set in days (Allview team)
+ - authorisation without user name/password (Allview team)
+ - default user "guest" (Allview team)
+ - added table 'sessions' (Allview team)
+ - added index triggers.value and trigger.status (Allview team)
+ - added column alarms.value (Allview team)
+ - removed column alarms.istrue (Allview team)
+ - added columns triggers.status (Allview team)
+ - added columns triggers.value (Allview team)
+ - removed column triggers.istrue (Allview team)
+ - support for --enable-static for ./configure (Allview team)
+ - housekeeping period for alarms and alerts to be set in days (Allview team)
+ - created directory upgrades/dbpatches/1.0beta3_to_1.0beta4 (Allview team)
+ - more anvanced algorithm for updating disable_until field (Allview team)
+ - problem with "Lost connection to DB" solved (Allview team)
+ - function DBis_empty(), code cleanup (Allview team)
+ - unreachable parameters will not be shown in Queue (Allview team)
+ - support for check_service[service,port]
+ - advanced change of host status in allview_suckerd (Allview team)
+ - added support of UserParameter(s) returning non-numeric values (Allview team) 
+ - doc/manual.lyx will not be included in Allview release (Allview team)
+ - changes to make Allview compile in non-GCC environments (Allview team)
+ - unreachable hosts will be clickable in system maps (Allview team)
+ - fixed double posting of the same trigger status into alarms (Allview team) 
+ - fixed macros substitution in email alerts (Allview team)
+ - removed option -Wall from all Makefiles (Allview team)
+ - removed "//" comments from Allview code (Allview team)
+ - disabled experimental code by commenting #define PERF (Allview team)
+ - improvements in SNMP handling for allview_suckerd (Allview team)
+ - fixed check for SNMP library in configure.in (Allview team)
+ - template host set to empty in Host definition form (Allview team)
+ - support for DisableHousekeeping for allview_suckerd (Allview team)
+ - protection from items.delay set to 0 (Allview team)
+ - values provided by an agent can be less than zero (Allview team)
+
+Changes for 1.0beta3:
+
+ - support for chart showing diff instead of real values (Allview team)
+ - support for new trigger status - UNKNOWN (Allview team)
+ - allview_suckerd housekeeping process to disconnect from 
+ DB when unactive (Allview team)
+ - support for check_service[http] (Allview team)
+ - drop column config.password_required (Allview team)
+ - drop column users.groupid (Allview team)
+ - drop table groups (Allview team)
+ - added parameter DBConnectOnEach for allview_trapperd (Allview team)
+ - added default user "guest" (Allview team)
+ - more support for flexible permissions (Allview team)
+ - added support for Inverse Select in status of triggers (Allview team)
+ - added support for flexible permissions (Allview team)
+ - fixed items.php (Allview team)
+ - added table 'rights' (Allview team)
+ - added time legend for simple graph (Allview team)
+ - already existing hosts can be used as template from new host (Allview team)
+ - new algorithm for audible notification in screen "Status of Triggers"
+ (Allview team)
+ - changed definition of DebugLevel (Allview team)
+ - improved update_triggers() (Allview team)
+ - fixed get_lastvalue() (Allview team)
+ - minor changes in include/cfg.c (Allview team)
+ - column functions.lastvalue changed to varchar(255) (Allview team)
+ - column items.lastvalue changed to varchar(255) (Allview team)
+ - column items.prevvalue changed to varchar(255) (Allview team)
+ - support for version[allview_agent] (Allview team)
+ - better validation of trigger expressions in validate_expression
+ (Allview team)
+ - common parser of config files in include/cfg.c (Allview team)
+ - added column value_type to table items_template (Allview team)
+ - support for system[uname] (Allview team)
+ - support for system[hostname] (Allview team)
+ - parameter Server can consist of list of Allview servers (Allview team)
+ - SO_LINGER is default socket option for allview_sender (Allview team)
+ - added support of NoTimeWait for allview_trapperd (Allview team)
+ - fixed schema for PostgreSQL, column disable_until (Allview team)
+ - added directory upgrades/dbpatches/1.0beta2_to_1.0beta3 (Allview team)
+ - correct handling of timeout situations for allview_agentd (Allview team)
+ - added support for non-syslog logging (Allview team)
+ - added parameter LogFile for allview_trapper (Allview team)
+ - added parameter LogFile for allview_trapperd (Allview team)
+ - added parameter LogFile for allview_agentd (Allview team)
+ - added parameter LogFile for allview_suckerd (Allview team)
+ - added files include/log.h and include/log.c (Allview team)
+ - solved problem with getpeername() (Allview team)
+ - support for parameter Timeout for allview_trapper (Allview team)
+ - support for parameter Timeout for allview_trapperd (Allview team)
+ - support for parameter Timeout for allview_agent (Allview team)
+ - fixed wrong data in alarms.php (Allview team)
+ - swapped warning_on.wav and warning_off.wav (Allview team)
+ - support for parameter Timeout for allview_agentd (Allview team)
+ - support for parameter Timeout for allview_suckerd (Allview team)
+ - do not refresh screen if displayed all triggers (Allview team)
+ - fixed "Send message to" in actions.html (Allview team)
+ - support for experimental parameter NoTimeWait (Allview team)
+ - diskfree[*] to return free disk space in Kb (Allview team)
+ - support for non-numeric parameters (Allview team)
+ - common parser function for configuration files (Allview team)
+ - added file include/cfg.h and include/cfg.c (Allview team)
+ - support for system[uptime] on FreeBSD (Allview team)
+ - support for kern[maxfiles] on FreeBSD (Allview team)
+ - support for kern[maxproc] on FreeBSD (Allview team)
+ - allview_trapperd cannot be ran as root (Allview team)
+ - added table history_str (Allview team)
+ - added column value_type to table items (Allview team)
+ - removed(?) support for automake (Allview team)
+ - partial support for automake (Allview team)
+ - parent process will terminate childs if one of the childs died
+ (Allview team)
+ - support for PidFile for allview_agentd,allview_suckerd and
+ allview_trapperd (Allview team)
+ - Allview processes will show statuses for ps (FreeBSD,...) (Allview team)
+ - changes in AUTHORS (Allview team)
+ - added support for IP addresses for SNMP-enabled hosts.
+ Thanks to Denis Ustimenko. (Allview team) 
+ - commented #define TEST_PARAMETERS in allview_agent.c (Allview team)
+ - proc_cnt[apache] was changed to proc_cnt[httpd] (Allview team)
+
+Changes for 1.0beta2:
+
+ - changes in manual.lyx (Allview team)
+ - added parameter ListenPort to allview_agentd and allview_trapperd
+ (Allview team)
+ - all *.html documents were renamed to *.php (Allview team)
+ - clean compilation on HP-UX 11.xx (Allview team)
+ - change host status to Unreachable if agent drops connection (Allview team)
+ - added #include <time.h> into db.h (Allview team)
+ - added support for connection to MySQL via Unix socket. Thanks to Arturs
+ Aboltins (Allview team)
+ - configure to find PostgreSQL in /usr/local/lib and  
+/usr/local/include/pgsql (Allview team)
+ - added set of user-defined parameters for monitoring MySQL
+servers. See misc/conf/allview_agent(d).conf (Allview team)
+ - check_service[smtp] will send QUIT. (Charlie)
+ - clean compilation on FreeBSD (Allview team)
+ - clean compilation on Solaris (Allview team)
+ - check_service[smtp] will send QUIT. Thanks to Charlie. (Allview team)
+ - calls to malloc+strcpy changed to strdup() (Allview team) 
+ - fix of parameter Server in allview_agentd.conf (Allview team)
+ - fix of System Map image (Allview team)
+
+Changes for 1.0beta1:
+
+ - added startup scripts for RedHat. (Charlie Collins) 
+ - disabled unfinished "IT SERVICES" functionality  (Allview team)
+ - support for parameter Server in allview_agent.conf (Allview team)
+ - added sample allview_trapper(d).conf to misc/conf (Allview team)
+ - support for configuration file for allview_trapper(d) (Allview team)
+ - support for DB* parameters in allview_suckerd.conf (Allview team)
+ - not supported items will not be shown in latest values (Allview team)
+ - allview_agentd cannot be ran as root (Allview team)
+ - added file misc/conf/allview_suckerd.conf (Allview team)
+ - added misc/init.d/debian/allview-server (Allview team)
+ - allview_suckerd cannot be ran as root (Allview team)
+ - added column URL to table triggers (Allview team)
+ - character '.' can be used in definition of monitored paramaters
+ (Allview team)
+ - added average-only mode for trends (Allview team)
+ - fixed bug with unexpected change of item status to NOT SUPPORTED. This
+ bug appeared because of incomplete processing of timeout situations (Allview team)
+ - constant DELAY_ON_NETWORK_FAILURE is set to 60 (Allview team)
+ - added column status to table services (Allview team)
+ - added user-defined sorting to form "Latest Values" (Allview team)
+ - extra debug information in case of network errors in allview_suckerd
+ (Allview team)
+ - fixed uninterruptable calls to connect() in allview_suckerd (Allview team)
+ - added column "soft" to services_links (Allview team)
+ - added function DBfetch to frontends/php/include/db.inc (Allview team)
+ - srv_status.html accessible without password (Allview team)
+ - added srv_status.html and services.html (Allview team)
+ - added table services and services_links (Allview team)
+ - support for parameter StartAgents in allview_agentd.conf (Allview team)
+ - number of forked allview_trapperd decreased to 5 (Allview team)
+ - number of forked allview_agentd decreased to 5 (Allview team)
+ - support for parameter UserParameter in allview_agentd.conf (Allview team)
+ - support for advanced allview_agentd.conf (Allview team)
+ - added misc/conf/allview_agentd.conf
+ - in case of network error, allview_suckerd will not try to request any parameters
+ from the host during next 120 seconds (Allview team)
+ - added directory upgrades/dbpatches/1.0alpha12_to_1.0beta1 (Allview team)
+ - added column disabled_until to table hosts (Allview team)
+ - modified SQL statements in both report2.html and graph2.html. Thanks
+to Oliver Siegmar. (Allview team) 
+ - added support of audible notification (Allview team)
+ - select criteria in form "Status of Triggers". Thanks to Lauris
+Stiglics. (Allview team)
+ - default values for config.alert_history and config.alarm_history are set to
+ one year (Allview team)
+ - file COPYING changed (Allview team)
+ - file INSTALL truncated (Allview team)
+ - added "-lcrypto" to SNMP library detection in configure.in (Allview team)
+ - additional statistics in screen "Status of Allview" (Allview team)
+ - changes in manual.lyx (Allview team)
+ - added #define <string.h> to some C sources to eliminate compiler warnings (Allview team)
+
+Changes for 1.0alpha12:
+
+ - cksum[/etc/inetd.conf] will not be supporter for a while (Allview team)
+ - diff(0) will not be evaluated as '1' for a fresh item (Allview team)
+ - not monitored hosts will not be referenced from System Map (Allview team)
+ - not monitored hosts will not be shown in form Status of Triggers (Allview team)
+ - in case of network error, allview_suckerd will not try to request same parameter
+ during next 120 seconds (Allview team)
+ - allview_trapperd will not exit after timeout (Allview team)
+ - added comments to many functions of source code (Allview team)
+ - added columns alert_history and alarm_history to table config (Allview team)
+ - added link from graphs to trends and vs (Allview team)
+ - housekeeping process in allview_suckerd will also delete old records from tables
+   alerts and alarms (Allview team)
+ - added directory upgrades/dbpatches/1.0alpha11_to_1.0alpha12 (Allview team)
+ - added index on column "clock" for table alarms (Allview team)
+ - cleanup of all *.html files (Allview team)
+ - removed doc/dbstructure (Allview team)
+ - removed doc/manual.txt (Allview team)
+ - minor changes in manual.lyx (Allview team)
+ - added version (draft 1.01) to manual.lyx (Allview team)
+ - character '-' can be used to form server name (Allview team)
+ - fixed dependencies in functions that delete information for allview tables (Allview team)
+ - fixed function is_float (Allview team)
+ - fixed select statement for Network Maps. Host status is correct. (Allview team) 
+ - availability report will not show not monitored hosts (Allview team)
+ - "maxumum" changed to "maximum" in actions.html (Allview team)
+ - "have been restarted" changed to "has been ..." (Allview team)
+ - added support for opertor '=' (Allview team)
+ - changes in timeout handling for allview_trapperd (Allview team)
+ - changes in doc/manual.lyx (Allview team)
+ - doc/manual.lyx created (Allview team)
+ - no SA_RESTART flag for sigaction() (Allview team)
+ - signal() was changed to sigaction() (Allview team)
+ - changes in timeout handling (Allview team)
+ - added support for cksum[*], "*" can be any filename (Allview team)
+ - cksum[] does not call external program "cksum" anymore (Allview team)
+ - added support for memory[free], memory[total] and memory[shared]
+   for FreeBSD (Allview team)
+ - minor fixes in doc/manual.txt (Allview team)
+ - minor fixes in INSTALL (Allview team)
+ - added support for check_port[*], which tries to connect to the port (Aelxei)
+ - new type of parameters: parameter[*], actual value of "*" can
+ be passed from Allview server (Allview team)
+ - allview_agentd will lower scheduling priority to 5 (Allview team)
+ - fixed broken customized graphs, file chart2.html (Allview team)
+
+Changes for 1.0alpha11:
+
+ - minor changes in manual.txt (Allview team)
+ - added support for swap[free] and swap[total] for Solaris (Allview team)
+ - added define HAVE_PROC_LOADAVG (Allview team)
+ - parameter tcp_count is not supported anymore (Allview team)
+ - no warnings for bcopy anymore under Solaris (Allview team)
+ - changes in AUTHORS (Allview team)
+ - fixes in function PROCCNT (Allview team)
+ - changes in documentation (Mike)
+ - simplified tcp_listen procedure in allview_trapperd.c (Allview team)
+ - simplified tcp_listen procedure in allview_agentd.c (Allview team)
+ - no full list of triggers and items will be shown (Allview team)
+ - deleted column triggers.lastcheck (Allview team)
+ - fixed PostgreSQL upgrade patch to 1.0alpha10 (Allview team)
+ - if item.history==0, not values will be added to table history for this item (Allview team)
+ - added directory upgrades/dbpatches/1.0alpha10_to_1.0alpha11/ (Allview team)
+ - added set of keys proc_cnt[*] (Allview team)
+ - when pressing Acive in list of items, [all] selected unstead of [Server]. Fixed. (Allview team)
+ - some triggers have incorrect status. Fixed. (Allview team)
+ - global variable $ERROR_MSG will show details of operation failure (Allview team)
+ - fixed both allview_trapper and allview_trapper to correctly change status of triggers (Allview team)
+
+Changes for 1.0alpha10:
+
+ - added support for trigger dependencies
+ - added column dep_level to table TRIGGERS
+ - added new host type: Workstation + frontends/php/images/sysmaps/Workstation.png
+ - added table triger_depends
+ - calls to perror() were changed to syslog() where possible
+ - added status line to full screen version of form "Status of Triggers"
+ - added directory upgrades/dbpatches/1.0alpha9_to_1.0alpha10/
+ - removed parameters net[listen_21],net[listen_22],net[listen_25],net[listen_110],
+   net[listen_143]
+ - added parameters check_service[ftp],check_service[smtp],check_service[ssh],check_service[pop],
+   check_service[nntp],check_service[imap]
+ - added constant TRAPPERD_FORKS (default is 10)
+ - added constant AGENTD_FORKS (default is 10)
+ - minor fixes in PHP code
+ - added some basic information on allview_trapperd to manual.txt
+ - added allview_trapperd
+ - minor fixes in manual.txt
+ - check for filesystem /proc in configure.in
+ - table "Supported parameters by platform" added to manual.txt
+ - removed recommendation of PostgreSQL from manual.txt
+ - use of /proc was changed to native calls to sysinfo where possible
+ - fixed double appearing of complex triggers in list of triggers
+ - added form for changing host details
+ - All calculations are made in C code instead of SQL statements
+ - Housekeping now runs as separate process, however it's part of allview_suckerd
+ - "Not monitored" will not be displayed
+ - Calls to mhash() changed to md5(), thus eliminating use of php4-mhash module.
+ - Added missing line in allview_suckerd. Now it reads items.snmp_oid from DB.
+
+Changes for 1.0alpha9:
+
+ - allview_suckerd fixed to listen on interfaces other than 127.0.0.1
+ - Fixed nasty bug in DB structure. One of indexes of table functions was incorrectly defined as unique.
+ - added patches to upgrades/dbpatches/1.0alpha8_to_1.0alpha9
+ - Added status line to all PHP forms (like, "[Host added]")
+
+Changes for 1.0alpha8:
+
+ - changed type of actions.message and alerts.message to blob(text)
+ - added new parameters: io[disk_*]
+ - allview_sucker renamed to allview_suckerd
+ - new high performance allview_agentd
+ - connect using IP address became possible
+ - new columns - useip,ip were added to table hosts
+ - added bin/
+ - removed src/.../acconfig.h
+ - removed src/.../configure.in
+ - added Makefile.in,acconfig.h,configure.in
+ - added src/allview_sucker/acconfig.h and src/allview_trapper/acconfig.h
+ - parameters net[listen_??] will use /proc filesystem
+ - parameter system[proccount] uses call to sysinfo() function
+ - removed calls to command strip from all Makefile.in
+ - passwords are not stored in plain text. MD5 is used.
+ - allview_agent can be tested by defining macro TEST
+ - added index (triggerid,clock) for table alarms
+ - status of triggers will not be shown for disabled and not-supported parameters
+ - fixed availability report
+ - optimization of chart.html
+ - added trend.html
+ - added trends.html
+ - improved performance of network map
+ - added column icon to table sysmaps_hosts
+ - added images Hub.png, Notebook.png, Printer.png, Router.png, Server.png, host.png
+ - new monitored parameters: cksum[/usr/sbin/sshd], cksum[/usr/bin/ssh]
+ - a color for each parameter of graph can be defined
+ - warning in functions evaluate_DIFF has been eliminated
+ - removed columns "Lastdelete" and "Nextcheck" from configuration of items
+ - added patches to upgrades/dbpatches/1.0alpha7_to_1.0alpha8
+ - label "Host" changed to "Parameter" in screen "Conf. of graph"
+ - updated doc/dbstructure
+
+Changes for 1.0alpha7:
+
+ - added section about configuration of Apache
+ - name of server included to descriptions of template triggers
+ - link from list of triggers to trigger change form 
+ - changed host form to ask about values from template
+ - deleted link to comments.html in tr_status.html
+ - fixed Enabled/Disabled checkbox in trigger form
+ - added real links to page About
+ - fullscreen mode for form Status of Triggers
+ - minor changes in manual.txt
+ - no password to see alarms needed
+ - fullscreen mode for Network Maps and graphs
+ - fixed bug with getting processor load on Linux
+ - added /upgrades/dbpatches/1.0alpha6_to_1.0alpha7
+ - changes in manual.txt
+ - fixed bug with lost status of trigger
+ - added file frontends/php/about.html
+ - link can be deleted now (network maps)
+ - host icons in network maps became clickable
+ - function NODATA is no longer supported
+ - fixed get_minnextcheck
+ - all these tables are added to PostgreSQL
+ - added table graphs_items
+ - lowered default values for triggers
+ - added file frontends/php/chart2.html
+ - added file frontends/php/charts.html
+ - added file frontends/php/graph.html
+
+ - added file frontends/php/graphs.html
+ - added file frontends/php/images/sysmaps/host.png
+ - added file frontends/php/map.html
+ - added file frontends/php/maps.html
+ - added file frontends/php/sysmap.html
+ - added file frontends/php/sysmaps.html
+ - added table sysmap
+ - added table sysmaps
+
+Changes for 1.0alpha6:
+
+ - error in PHP frontend in Host definition form 
+
+Changes for 1.0alpha5:
+
+ - changes in manual.txt
+ - support for SNMP agents !
+ - allview_sucker forks N (default=10) copies to run in parallel mode. Monitoring of hundreds of servers is reality ! 
+ - "netstat -ln|grep tcp" was replaced by more efficient "netstat -lnt"
+ - support for macros in email subject and body
+ - fixed allview_trapper. Added update_functions (itemid).
+ - finally (!) removed include/sysinfo.h
+ - source code became more structured
+ - call to perror was changed to syslog where necessary 
+ - allview_sucker will not print "Spent x seconds ..." to syslog
+ 
+Changes for 1.0alpha4:
+
+ - fixed EXECUTE function in sysinfo.c
+   It will return FAIL when command not found.
+ - added report of Status of Allview - report1.html
+ - added Availability Report - report2.html
+ - added hints on choosing right DB (PostgreSQL vs MySQL) to manual.txt
+ - added section on reports in manual.txt
+ - fixed "undefined $register" and other warnings in media.html
+ - "netstat -an|grep LISTEN" was replaced by more efficient "netstat -ln|grep tcp"
+   in allview_agent.c
+ - critical value for disk space and number of inodes decreased to 100000000 
+ - table "platforms" is not used anymore
+ - removed platformid and related indexes from table items_template
+ - directory upgrades/ created
+ - directory create/data/ created
+ - Chapter 6 (Upgrading) added to manual.txt
+ - added notes for PostgreSQL to manual.txt
+ - added key (userid) to table media (MySQL)
+ - added key (triggerid) to table actions (MySQL)
+ - added key (istrue) to table triggers (MySQL,PostgreSQL)
+ - added key (nextcheck) to table items (MySQL,PostgreSQL)
+ - added key (status) to table items (MySQL,PostgreSQL)
+ - removed include/sysinfo.h
+ - trigger update does not delete actions anymore
+ - functionality of allview_alarmer transferred to allview_sucker.
+   No need for allview_alarmer anymore !
+
+Changes for 1.0alpha3:
+
+ - fixed NODATA function
+ - fixed bug with trigger updating in PHP frontend
+ - added check for SMTP, FTP, SSH, TELNET, WEB, POP3, and IMAP 
+   servers availability
+ - fixed Trigger Status form
+ - removed MySQL specific unix_timestamp() from SQL statements
+ - added "Use of Allview" section to manual

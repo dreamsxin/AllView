@@ -1,0 +1,10 @@
+# Build rules
+
+all:
+
+	@CC@ -o ../../bin/allview_snmptrapper @CFLAGS@ -I../../include ../../include/cfg.c ../../include/log.c allview_snmptrapper.c @LIBS@
+
+clean:
+	rm -f *.o 
+	rm -f ../../bin/allview_snmptrapper
+

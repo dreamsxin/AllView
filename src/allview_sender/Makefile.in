@@ -1,0 +1,10 @@
+# Build rules
+
+all:
+
+	@CC@ -o ../../bin/allview_sender @CFLAGS@ -I../../include ../../include/snprintf.c allview_sender.c @LIBS@
+
+clean:
+	rm -f *.o 
+	rm -f ../../bin/allview_sender
+

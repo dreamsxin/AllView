@@ -1,0 +1,264 @@
+/* include/config.h.in.  Generated from configure.in by autoheader.  */
+/* Define if you havnt socklen_t type */
+#undef socklen_t
+
+/* Define if you want to use LDAP */
+#undef HAVE_LDAP
+
+/* Define if filesystem /proc exists */
+#undef HAVE_PROC
+
+/* Define if sys/resource.h has function setpriority() */
+#undef HAVE_SYS_RESOURCE_SETPRIORITY
+
+/* Define if file /proc/net/dev exists */
+#undef HAVE_PROC_NET_DEV
+
+/* Define if file /proc/loadavg exists */
+#undef HAVE_PROC_LOADAVG
+
+/* Define if function sysconf is in unistd.h */
+#undef HAVE_UNISTD_SYSCONF
+
+/* Define if function va_copy is in stdarg.h */
+#undef HAVE___VA_COPY
+
+/* Define if function sysctl accepts KERN_BOOTTIME */
+#undef HAVE_FUNCTION_SYSCTL_KERN_BOOTTIME
+
+/* Define if function sysctl accepts KERN_MAXPROC */
+#undef HAVE_FUNCTION_SYSCTL_KERN_MAXPROC
+
+/* Define if function sysctl accepts KERN_MAXFILES */
+#undef HAVE_FUNCTION_SYSCTL_KERN_MAXFILES
+
+/* Define if function setproctitle() exists */
+#undef HAVE_FUNCTION_SETPROCTITLE
+
+/* Define if functions seteuid() and setegid() exist */
+#undef HAVE_FUNCTION_SETEUID
+
+/* Define if file /proc/1/status exists */
+#undef HAVE_PROC_1_STATUS
+
+/* Define if file /proc/0/psinfo exists */
+#undef HAVE_PROC_0_PSINFO
+
+/* Define if sys/swap.h defines struct swaptable*/
+#undef HAVE_SYS_SWAP_SWAPTABLE
+
+/* Define if sys/vmmeter.h defines struct vmtotal*/
+#undef HAVE_SYS_VMMETER_VMTOTAL
+
+/* Define if structure sysinfo has mem_unit */
+#undef HAVE_SYSINFO_MEM_UNIT
+
+/* Define if structure sysinfo has bufferram */
+#undef HAVE_SYSINFO_BUFFERRAM
+
+/* Define if structure sysinfo has procs */
+#undef HAVE_SYSINFO_PROCS
+
+/* Define if structure sysinfo has uptime */
+#undef HAVE_SYSINFO_UPTIME
+
+/* Define if structure sysinfo has bufferram */
+#undef HAVE_SYSINFO_FREERAM
+
+/* Define if structure sysinfo has sharedram */
+#undef HAVE_SYSINFO_SHAREDRAM
+
+/* Define if structure sysinfo has totalram */
+#undef HAVE_SYSINFO_TOTALRAM
+
+/* Define if structure sysinfo has totalswap */
+#undef HAVE_SYSINFO_TOTALSWAP
+
+/* Define if structure sysinfo has freeswap */
+#undef HAVE_SYSINFO_FREESWAP
+
+/* Define if you want to use MySQL */
+#undef HAVE_MYSQL
+
+/* Define if you want to use PostgreSQL */
+#undef HAVE_PGSQL
+
+/* Define if you want to use SNMP */
+#undef HAVE_SNMP
+
+/* Define if you want to use NET-SNMP */
+#undef HAVE_NETSNMP
+
+/* Define if you want to use UCD-SNMP */
+#undef HAVE_UCDSNMP
+
+/* Define to 1 if you have the <arpa/inet.h> header file. */
+#undef HAVE_ARPA_INET_H
+
+/* Define to 1 if you have the `asprintf' function. */
+#undef HAVE_ASPRINTF
+
+/* Define to 1 if you have the <ctype.h> header file. */
+#undef HAVE_CTYPE_H
+
+/* Define to 1 if you have the <dirent.h> header file. */
+#undef HAVE_DIRENT_H
+
+/* Define to 1 if you have the <errno.h> header file. */
+#undef HAVE_ERRNO_H
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define to 1 if you have the `getloadavg' function. */
+#undef HAVE_GETLOADAVG
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the <kstat.h> header file. */
+#undef HAVE_KSTAT_H
+
+/* Define to 1 if you have the `kstat' library (-lkstat). */
+#undef HAVE_LIBKSTAT
+
+/* Define to 1 if you have the `nsl' library (-lnsl). */
+#undef HAVE_LIBNSL
+
+/* Define to 1 if you have the `socket' library (-lsocket). */
+#undef HAVE_LIBSOCKET
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the <mtent.h> header file. */
+#undef HAVE_MTENT_H
+
+/* Define to 1 if you have the <netdb.h> header file. */
+#undef HAVE_NETDB_H
+
+/* Define to 1 if you have the <netinet/in.h> header file. */
+#undef HAVE_NETINET_IN_H
+
+/* Define to 1 if you have the <signal.h> header file. */
+#undef HAVE_SIGNAL_H
+
+/* Define to 1 if you have the `snprintf' function. */
+#undef HAVE_SNPRINTF
+
+/* Define to 1 if you have the `socket' function. */
+#undef HAVE_SOCKET
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdio.h> header file. */
+#undef HAVE_STDIO_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the `strtod' function. */
+#undef HAVE_STRTOD
+
+/* Define to 1 if you have the <syslog.h> header file. */
+#undef HAVE_SYSLOG_H
+
+/* Define to 1 if you have the <sys/loadavg.h> header file. */
+#undef HAVE_SYS_LOADAVG_H
+
+/* Define to 1 if you have the <sys/mount.h> header file. */
+#undef HAVE_SYS_MOUNT_H
+
+/* Define to 1 if you have the <sys/param.h> header file. */
+#undef HAVE_SYS_PARAM_H
+
+/* Define to 1 if you have the <sys/procfs.h> header file. */
+#undef HAVE_SYS_PROCFS_H
+
+/* Define to 1 if you have the <sys/pstat.h> header file. */
+#undef HAVE_SYS_PSTAT_H
+
+/* Define to 1 if you have the <sys/socket.h> header file. */
+#undef HAVE_SYS_SOCKET_H
+
+/* Define to 1 if you have the <sys/statvfs.h> header file. */
+#undef HAVE_SYS_STATVFS_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/swap.h> header file. */
+#undef HAVE_SYS_SWAP_H
+
+/* Define to 1 if you have the <sys/syscall.h> header file. */
+#undef HAVE_SYS_SYSCALL_H
+
+/* Define to 1 if you have the <sys/sysctl.h> header file. */
+#undef HAVE_SYS_SYSCTL_H
+
+/* Define to 1 if you have the <sys/sysinfo.h> header file. */
+#undef HAVE_SYS_SYSINFO_H
+
+/* Define to 1 if you have the <sys/sysmacros.h> header file. */
+#undef HAVE_SYS_SYSMACROS_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <sys/vfs.h> header file. */
+#undef HAVE_SYS_VFS_H
+
+/* Define to 1 if you have the <sys/vmmeter.h> header file. */
+#undef HAVE_SYS_VMMETER_H
+
+/* Define to 1 if you have the <time.h> header file. */
+#undef HAVE_TIME_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the `vasprintf' function. */
+#undef HAVE_VASPRINTF
+
+/* Define to 1 if you have the <vm/vm_param.h> header file. */
+#undef HAVE_VM_VM_PARAM_H
+
+/* Define to 1 if you have the `vsnprintf' function. */
+#undef HAVE_VSNPRINTF
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#undef RETSIGTYPE
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+/* Define to `int' if <sys/types.h> does not define. */
+#undef pid_t
